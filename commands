@@ -1,6 +1,13 @@
+Flow 
+Model - admin
+Model - view -urls
+Model - serializer - view - urls for rest 
+
 👌 https://realpython.com/pipenv-guide/#pipenv-introduction - Pipenv is a packaging tool for Python that solves some common problems
-associated with the typical workflow using pip , virtualenv , and the good old requirements. txt .
-👌 
+associated with the typical workflow using pip , virtualenv, and the good old requirements. txt. - pipenv shell
+👌 pipenv for all installations - pipenv install django and 
+👌 django-admin startproject nd python manage.py startapp
+👌 dealing with slugs - https://kodnito.com/posts/slugify-urls-django/
 
 
 
