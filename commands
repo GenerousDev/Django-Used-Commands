@@ -9,5 +9,9 @@ associated with the typical workflow using pip , virtualenv, and the good old re
 👌 django-admin startproject nd python manage.py startapp
 👌 dealing with slugs - https://kodnito.com/posts/slugify-urls-django/
 
-
+USER WORKFLOW 
+- pass slug,uuid,or pk to urls.py
+- urls pass details to view 
+- view get the datils from model 
+- return the detail to the template
 
