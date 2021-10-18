@@ -24,4 +24,4 @@ STATICFILES_DIRS = [
 - on your base file add 👇 to the top 
 {% load static %}
 - create your static/css/<name> folder
-- add <link rel="stylesheet" href="{% static 'css/<name>.css' %}"> to the head of your base html page.
+- add <link rel="stylesheet" type="text/css" href="{% static 'css/<name>.css' %}"> to the head of your base html page.
