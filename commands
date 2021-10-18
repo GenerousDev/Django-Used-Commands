@@ -15,3 +15,13 @@ USER WORKFLOW
 - view get the datils from model 
 - return the detail to the template
 
+CSS RUNDOWN
+ - From Setting check base_dir eg print(BASE_DIR)
+ - add this piece of code to the settings, prefereable under
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+- on your base file add 👇 to the top 
+{% load static %}
+- create your static/css/<name> folder
+- add <link rel="stylesheet" href="{% static 'css/<name>.css' %}"> to the head of your base html page.
