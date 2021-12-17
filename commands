@@ -74,6 +74,10 @@ heroku config
 // To perform some form of check
 $ heroku config:get SECRET_KEY
 6aj9il2xu2vqwvnitsg@!+4-8t3%zwr@$agm7x%o%yb2t9ivt%
+or add it to heroku dashboard 
+
+//Hack 
+that is checkout to a new branch and merge to main branch then run your push command  
 
 heroku releases
 git status
