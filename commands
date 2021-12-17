@@ -38,7 +38,12 @@ heroku create <project-name>
 tail -n3 .git/config
 heroku git:remote --app <project-name>
 /* create a Procfile file */ 
-paste this in : "web: python manage.py runserver 0.0.0.0:\$PORT" 
+paste in Procfile
+python manage.py collectstatic --noinput;
+web: gunicorn --pythonpath app app.wsgi;
+web: gunicorn backend.wsgi;
+web: gunicorn backend.wsgi:application --log-file - --log-level debug
+
 git add Procfile
 git commit -m "Specify the command to run your project"
 heroku local
