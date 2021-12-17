@@ -25,3 +25,62 @@ STATICFILES_DIRS = [
 {% load static %}
 - create your static/css/<name> folder
 - add <link rel="stylesheet" type="text/css" href="{% static 'css/<name>.css' %}"> to the head of your base html page.
+
+Commiting to heroku
+python -m pip freeze > requirements.txt
+python -m pip install -r requirements.txt
+git init
+git status
+git add .
+git commit -m "Initial commit"
+heroku login
+heroku create <project-name>
+tail -n3 .git/config
+heroku git:remote --app <project-name>
+/* create a Procfile file */ 
+paste this in : "web: python manage.py runserver 0.0.0.0:\$PORT" 
+git add Procfile
+git commit -m "Specify the command to run your project"
+heroku local
+python -m pip install django-heroku
+python -m pip freeze > requirements.txt
+
+
+Another section ✔
+# portfolio/settings.py
+
+# ...
+
+import django_heroku
+django_heroku.settings(locals())
+
+-git commit -am "Automatic configuration with django-heroku"
+
+Another Section ✔
+python manage.py shell
+>>> from django.core.management.utils import get_random_secret_key
+>>> print(get_random_secret_key())
+
+'SECRET_KEY=6aj9il2xu2vqwvnitsg@!+4-8t3%zwr@$agm7x%o%yb2t9ivt%' > .env
+
+heroku config:set SECRET_KEY='6aj9il2xu2vqwvnitsg@!+4-8t3%zwr@$agm7x%o%yb2t9ivt%'
+
+heroku config
+// To perform some form of check
+$ heroku config:get SECRET_KEY
+6aj9il2xu2vqwvnitsg@!+4-8t3%zwr@$agm7x%o%yb2t9ivt%
+
+heroku releases
+git status
+git add .
+git commit -m "Remove a hardcoded Django secret key"
+
+git push heroku master
+git push heroku main
+
+heroku run python manage.py migrate or heroku run python3 manage.py migrate
+$ git commit -am "Automate remote migrations"
+$ git push heroku master
+
+
+heroku run python manage.py createsuperuser
