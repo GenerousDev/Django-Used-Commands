@@ -41,8 +41,8 @@ heroku git:remote --app <project-name>
 paste in Procfile
 python manage.py collectstatic --noinput;
 web: gunicorn --pythonpath app app.wsgi;
-web: gunicorn backend.wsgi;
-web: gunicorn backend.wsgi:application --log-file - --log-level debug
+web: gunicorn  <project name>.wsgi;
+web: gunicorn <project name>.wsgi:application --log-file - --log-level debug
 
 git add Procfile
 git commit -m "Specify the command to run your project"
